@@ -12,6 +12,7 @@ public class ListMain3 {
 		list1.add(30);
 		list1.add(35);
 		
+		
 		Comparator<Integer>comp = new Comparator() {
 
 			@Override

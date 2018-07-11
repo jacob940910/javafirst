@@ -19,6 +19,6 @@ public class Singer {
 	public String toString() {
 		return "Singer [name=" + name + ", age=" + age + "]";
 	}
-	
+
 
 }

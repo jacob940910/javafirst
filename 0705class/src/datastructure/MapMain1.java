@@ -13,6 +13,7 @@ public class MapMain1 {
 		//동일한 키로 다시 저장하면 업데이트가 됩니다.
 		map.put("company", "SM Town");
 		
+		
 		//company 키의 값을 출력하기
 		System.out.println(map.get("company"));
 		//없는 키의 이름을 사용하면 null을 리턴

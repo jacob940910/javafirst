@@ -24,5 +24,6 @@ public class ListMain1 {
 		System.out.println(arrayList.get(3));
 
 	}
+	
 
 }

@@ -17,6 +17,7 @@ public class ListMain4 {
 		singer.setAge(28);
 		list.add(singer);
 		
+		
 		singer = new Singer();
 		singer.setName("김태연");
 		singer.setAge(30);

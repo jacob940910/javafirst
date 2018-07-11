@@ -11,6 +11,7 @@ public class ListMain2 {
 		ArrayList<Integer>al = new ArrayList<>();
 		LinkedList<Integer>li = new LinkedList<>();
 		
+		
 		al.add(1);
 		al.add(3);
 		al.add(4);
