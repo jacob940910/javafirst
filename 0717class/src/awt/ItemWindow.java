@@ -58,7 +58,7 @@ public class ItemWindow extends Frame {
 		};
 		
 		Choice cbcategory = new Choice();
-		for(String imsi : content[0]) {
+		for(String imsi : category) {
 			cbcategory.add(imsi);
 		}	
 		
@@ -69,9 +69,9 @@ public class ItemWindow extends Frame {
 		
 		
 		
-		Button btnExit = new Button();
+		Button btnExit = new Button("선택");
 		
-		Button btnSelect = new Button();
+		Button btnSelect = new Button("종료");
 		
 		Panel southPanel = new Panel();
 		
