@@ -4,27 +4,27 @@ package thread;
 
 public class Bank {
 
-	// ÀÜ¾×À» ÀúÀåÇÒ º¯¼ö
+	// ì”ì•¡ì„ ì €ì¥í•  ë³€ìˆ˜
 
 	private int balance = 1000;
 
 
 
-	// ÀÜ¾×À» º¯°æÇÏ´Â ¸Ş¼Òµå
+	// ì”ì•¡ì„ ë³€ê²½í•˜ëŠ” ë©”ì†Œë“œ
 
 	public void job(String msg) {
 
-		//this-³» ÀÚ½ÅÀÇ ÀÚ¿øÀ» »ç¿ëÇÏ´Â °æ¿ì
+		//this-ë‚´ ìì‹ ì˜ ìì›ì„ ì‚¬ìš©í•˜ëŠ” ê²½ìš°
 
-		//ÀÌ ÄÚµå´Â ÇÑ ¹ø¿¡ ¼öÇàµÇµµ·Ï ¼³Á¤
+		//ì´ ì½”ë“œëŠ” í•œ ë²ˆì— ìˆ˜í–‰ë˜ë„ë¡ ì„¤ì •
 
 		synchronized (this) {
 
-			System.out.println(msg + " ÇöÀç ÀÜ¾×:" + balance);
+			System.out.println(msg + " í˜„ì¬ ì”ì•¡:" + balance);
 
 			balance = balance - 100;
 
-			// 1ÃÊ ´ë±â
+			// 1ì´ˆ ëŒ€ê¸°
 
 			try {
 
@@ -36,7 +36,7 @@ public class Bank {
 
 			}
 
-			System.out.println(msg + "ÀÛ¾÷ ÈÄ ÇöÀç ÀÜ¾×:" + balance);
+			System.out.println(msg + "ì‘ì—… í›„ í˜„ì¬ ì”ì•¡:" + balance);
 
 		}
 

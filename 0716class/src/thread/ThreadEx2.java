@@ -10,7 +10,7 @@ public class ThreadEx2 extends Thread {
 
 	
 
-	//»ı¼ºÀÚ¿¡¼­ Bank ¿Í ¹®ÀÚ¿­ 1°³¸¦ ´ëÀÔ¹Ş±â
+	//ìƒì„±ìì—ì„œ Bank ì™€ ë¬¸ìì—´ 1ê°œë¥¼ ëŒ€ì…ë°›ê¸°
 
 	public ThreadEx2(Bank bank, String name) {
 
@@ -22,11 +22,11 @@ public class ThreadEx2 extends Thread {
 
 	
 
-	//½º·¹µå·Î µ¿ÀÛÇÒ ¸Ş¼Òµå
+	//ìŠ¤ë ˆë“œë¡œ ë™ì‘í•  ë©”ì†Œë“œ
 
 	public void run() {
 
-		//bankÀÇ ¸Ş¼Òµå¸¦ 3¹ø È£Ãâ
+		//bankì˜ ë©”ì†Œë“œë¥¼ 3ë²ˆ í˜¸ì¶œ
 
 		for(int i=0; i<3; i=i+1) {
 

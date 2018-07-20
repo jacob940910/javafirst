@@ -5,7 +5,7 @@ public class Account {
 	private int balance;
 
 	public void save() {
-		System.out.println("ÀÔ±ÝÀü ÀÜ¾×:" + balance);
+		System.out.println("ìž…ê¸ˆì „ ìž”ì•¡:" + balance);
 		balance = balance + 1000;
 
 		try {
@@ -14,7 +14,7 @@ public class Account {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("ÀÔ±ÝÈÄ ÀÜ¾×:" + balance);
+		System.out.println("ìž…ê¸ˆí›„ ìž”ì•¡:" + balance);
 
 	}
 
@@ -26,7 +26,7 @@ public class Account {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println("Ãâ±ÝÀü ÀÜ¾×:" + balance);
+			System.out.println("ì¶œê¸ˆì „ ìž”ì•¡:" + balance);
 			balance = balance - 1000;
 			try {
 				Thread.sleep(1000);
@@ -34,7 +34,7 @@ public class Account {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println("Ãâ±ÝÈÄ ÀÜ¾×:" + balance);
+			System.out.println("ì¶œê¸ˆí›„ ìž”ì•¡:" + balance);
 		}
 	}
 

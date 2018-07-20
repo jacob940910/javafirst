@@ -8,17 +8,17 @@ public class ThreadMain1 {
 
 	public static void main(String[] args) {
 
-		//Å¬·¡½º ÀÇ run ¸Ş¼Òµå »ç¿ë
+		//í´ë˜ìŠ¤ ì˜ run ë©”ì†Œë“œ ì‚¬ìš©
 
 		ThreadEx1 th1 = new ThreadEx1();
 
-		//µ¥¸ó ½º·¹µå·Î ¼³Á¤
+		//ë°ëª¬ ìŠ¤ë ˆë“œë¡œ ì„¤ì •
 
-		//´Ù¸¥ ½º·¹µå°¡ ÀÛ¾÷ ÁßÀÌ ¾Æ´Ï¸é ÀÚµ¿ Á¾·á
+		//ë‹¤ë¥¸ ìŠ¤ë ˆë“œê°€ ì‘ì—… ì¤‘ì´ ì•„ë‹ˆë©´ ìë™ ì¢…ë£Œ
 
 		th1.setDaemon(true);
 
-		//½º·¹µå ½ÃÀÛ
+		//ìŠ¤ë ˆë“œ ì‹œì‘
 
 		th1.start();
 
@@ -32,7 +32,7 @@ public class ThreadMain1 {
 
 			Thread.sleep(2000);
 
-			//InterrupteExceptionÀ» ¹ß»ı½ÃÅµ´Ï´Ù.
+			//InterrupteExceptionì„ ë°œìƒì‹œí‚µë‹ˆë‹¤.
 
 			th1.interrupt();
 
@@ -40,9 +40,9 @@ public class ThreadMain1 {
 
 			Thread.sleep(3000);
 
-			System.out.println("¸ŞÀÎ Á¾·á");
+			System.out.println("ë©”ì¸ ì¢…ë£Œ");
 
-			//ÇÁ·Î±×·¥ Á¾·á
+			//í”„ë¡œê·¸ë¨ ì¢…ë£Œ
 
 			//System.exit(0);
 

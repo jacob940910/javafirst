@@ -6,7 +6,7 @@ import java.awt.Dialog;
 import java.awt.Frame;
 
 public class MyWindow extends Frame {
-	//�깮�꽦�옄
+	//생성
 	public MyWindow() {
 		
 		
