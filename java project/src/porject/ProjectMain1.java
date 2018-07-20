@@ -9,7 +9,7 @@ public class ProjectMain1 {
 			for(j=0;j<5-i;j=j+1) {
 				System.out.print(" ");
 			}
-			//10º¸´ÙÀÛÀ»¶§ %
+			//10ë³´ë‹¤ìž‘ì„ë•Œ %
 			System.out.print(idx%10 );
 			idx=idx+1;
 			if(i>=1 && i<=4) {
@@ -19,14 +19,14 @@ public class ProjectMain1 {
 				System.out.print(idx%10);
 				idx=idx+1;
 			}
-			//¸Ç¹ØÀÇ 0ºÎÅÍ9±îÁö 
+			//ë§¨ë°‘ì˜ 0ë¶€í„°9ê¹Œì§€ 
 			if(i==5) {
 				for(j=0;j<2*i;j=j+1) {
 				System.out.print(idx%10);
 				idx=idx+1;
 				}
 			}
-			//for¹®ÀÌ³¡³¯¶§¸¶´ÙÁÙ¹Ù²ÞÀ» À§ÇØ¼­ printlnÀ»ÀÌ¿ë
+			//forë¬¸ì´ëë‚ ë•Œë§ˆë‹¤ì¤„ë°”ê¿ˆì„ ìœ„í•´ì„œ printlnì„ì´ìš©
 			System.out.println(" ");
 		}
 		
