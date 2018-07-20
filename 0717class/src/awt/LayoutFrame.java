@@ -11,68 +11,68 @@ import java.util.Random;
 
 public class LayoutFrame extends Frame {
 	public LayoutFrame() {
-		//À§Ä¡¿Í Å©±â¸¦ ¼³Á¤
+		//ìœ„ì¹˜ì™€ í¬ê¸°ë¥¼ ì„¤ì •
 		setBounds(100,100, 500,500);
-		//Á¦¸ñ¼³Á¤
-		setTitle("·¹ÀÌ¾Æ¿ô ¿¬½À");
+		//ì œëª©ì„¤ì •
+		setTitle("ë ˆì´ì•„ì›ƒ ì—°ìŠµ");
 		
 		Panel panel = new Panel();
 		
-		//panelÀÇ ·¹ÀÌ¾Æ¿ôÀ» ¼³Á¤
+		//panelì˜ ë ˆì´ì•„ì›ƒì„ ì„¤ì •
 		//panel.setLayout(new FlowLayout());
 		
 		/*
 		//Button btn = null;
-		//ÄÄÆ÷³ÍÆ® ¹èÄ¡
+		//ì»´í¬ë„ŒíŠ¸ ë°°ì¹˜
 		for(int i=0; i<10; i=i+1) {
 			Button btn = 
-					new Button("¹öÆ°"+i);
+					new Button("ë²„íŠ¼"+i);
 			panel.add(btn);
 		}
 		*/
 		/*
 		panel.setLayout(new BorderLayout());
 		
-		Button btnWest = new Button("¼­ÂÊ");
+		Button btnWest = new Button("ì„œìª½");
 		panel.add("West", btnWest);
 		
-		Button btnEast = new Button("µ¿ÂÊ");
+		Button btnEast = new Button("ë™ìª½");
 		panel.add("East", btnEast);
 		
-		Button btnCenter = new Button("Áß¾Ó");
+		Button btnCenter = new Button("ì¤‘ì•™");
 		panel.add("Center", btnCenter);
 		*/
 		
 		/*
 		panel.setLayout(new GridLayout(2,3, 10, 10));
 		for(int i=0; i<20; i=i+1) {
-			Button btn = new Button("¹öÆ°"+i);
+			Button btn = new Button("ë²„íŠ¼"+i);
 			panel.add(btn);
 		}
 		*/
 		
-		//ÄÄÆ÷³ÍÆ®ÀÇ Å©±â¿Í À§Ä¡¸¦ ¸¶À½´ë·Î º¯°æÇÒ ¼ö ÀÖ½À´Ï´Ù.
+		//ì»´í¬ë„ŒíŠ¸ì˜ í¬ê¸°ì™€ ìœ„ì¹˜ë¥¼ ë§ˆìŒëŒ€ë¡œ ë³€ê²½í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
 		panel.setLayout(null);
 		Label label = new Label("@");
 		label.setBounds(10, 50 ,30 ,50);
 		add(label);
 		
 		add(panel);
-		//È­¸é Å©±âÁ¶ÀıÀ» ¸øÇÏµµ·Ï¼³Á¤
+		//í™”ë©´ í¬ê¸°ì¡°ì ˆì„ ëª»í•˜ë„ë¡ì„¤ì •
 		setResizable(false);
-		//È­¸éÃâ·Â
+		//í™”ë©´ì¶œë ¥
 		setVisible(true);
 		
 		Thread th = new Thread() {
 			public void run() {
-				//¹«ÇÑ ¹İº¹
+				//ë¬´í•œ ë°˜ë³µ
 				while(true) {
-					//ÇöÀç ·¹ÀÌºíÀÇ À§Ä¡¸¦ °¡Á®¿À±â
+					//í˜„ì¬ ë ˆì´ë¸”ì˜ ìœ„ì¹˜ë¥¼ ê°€ì ¸ì˜¤ê¸°
 					int x= label.getLocation().x;
 					int y= label.getLocation().y;
 					//label.setLocation(x+10 , y);
 					
-					//·£´ıÇÏ°Ô ¿òÁ÷ÀÌ±â
+					//ëœë¤í•˜ê²Œ ì›€ì§ì´ê¸°
 					Random r = new Random();
 					label.setLocation(
 							r.nextInt(300),r.nextInt(300));

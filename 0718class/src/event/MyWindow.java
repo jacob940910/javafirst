@@ -9,45 +9,45 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
 
-//À©µµ¿ì Å¬·¡½º
+//ìœˆë„ìš° í´ë˜ìŠ¤
 public class MyWindow extends JFrame {
 	public MyWindow() {
-		//À§Ä¡¿Í Å©±â¼³Á¤
+		//ìœ„ì¹˜ì™€ í¬ê¸°ì„¤ì •
 		setBounds(500, 500, 1000, 1000);
-		//Á¦¸ñ¼³Á¤
-		setTitle("½ºÀ®À» ÀÌ¿ëÇÑ À©µµ¿ì");
-		//Á¾·á¹öÆ° ÀÌº¥Æ®Ã³¸®
+		//ì œëª©ì„¤ì •
+		setTitle("ìŠ¤ìœ™ì„ ì´ìš©í•œ ìœˆë„ìš°");
+		//ì¢…ë£Œë²„íŠ¼ ì´ë²¤íŠ¸ì²˜ë¦¬
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		//ÆĞ³ÎÀ» »ı¼º
+		//íŒ¨ë„ì„ ìƒì„±
 		JPanel panel = new JPanel();
 		
-		ImageIcon icon = new ImageIcon("C:\\Users\\503-19\\Desktop\\ÀÚ¿ø\\ÀÌ¹ÌÁö\\America.png");
+		ImageIcon icon = new ImageIcon("C:\\Users\\503-19\\Desktop\\ìì›\\ì´ë¯¸ì§€\\America.png");
 		JLabel label = new JLabel(icon);
 		//label.setIcon(icon);
-		label.setToolTipText("¾È³çÇÏ¼¼¿ä");
+		label.setToolTipText("ì•ˆë…•í•˜ì„¸ìš”");
 		
-		TitledBorder border = new TitledBorder("°æ°è¼±");
+		TitledBorder border = new TitledBorder("ê²½ê³„ì„ ");
 		
 		
 		label.setBorder(border);
 		panel.add(label);
 		
-		JButton btn = new JButton("¹öÆ°");
+		JButton btn = new JButton("ë²„íŠ¼");
 		panel.add(btn);
 		
-		//ÆĞ³ÎÀ» ÇÁ·¹ÀÓ¿¡ ºÎÂø
+		//íŒ¨ë„ì„ í”„ë ˆì„ì— ë¶€ì°©
 		add(panel);
 		
-		//È­¸é Ãâ·Â
+		//í™”ë©´ ì¶œë ¥
 		setVisible(true);
 		
-		//±×¸² ÆÄÀÏ ÀÌ¸§À» ¹è¿­·Î ¸¸µé±â
-		//¹è¿­Àº ¸¸µé¸é Å©±âº¯°æÀÌ ¾ÈµË´Ï´Ù.
+		//ê·¸ë¦¼ íŒŒì¼ ì´ë¦„ì„ ë°°ì—´ë¡œ ë§Œë“¤ê¸°
+		//ë°°ì—´ì€ ë§Œë“¤ë©´ í¬ê¸°ë³€ê²½ì´ ì•ˆë©ë‹ˆë‹¤.
 		String [] images = {
 				"0.png","1.png","2.png","3.png","4.png"
 		};
 		
-		//¸®½ºÆ®´Â Å©±â º¯°æÀÌ °¡´ÉÇÑ ¹è¿­ÀÔ´Ï´Ù.
+		//ë¦¬ìŠ¤íŠ¸ëŠ” í¬ê¸° ë³€ê²½ì´ ê°€ëŠ¥í•œ ë°°ì—´ì…ë‹ˆë‹¤.
 		ArrayList<String> list = new ArrayList<String>();
 		list.add("0.png");
 		list.add("1.png");
@@ -55,21 +55,21 @@ public class MyWindow extends JFrame {
 		list.add("3.png");
 		list.add("4.png");
 		
-		//ÀÌ¹ÌÁö°¡ º¯°æµÇ´Â µ¿¾È¿¡µµ ´Ù¸¥ ÀÛ¾÷À» ÁøÇàÇØ¾ßÇÏ¹Ç·Î ÀÌ¹ÌÁö º¯°æÀº ½º·¹µå»ı¼º
+		//ì´ë¯¸ì§€ê°€ ë³€ê²½ë˜ëŠ” ë™ì•ˆì—ë„ ë‹¤ë¥¸ ì‘ì—…ì„ ì§„í–‰í•´ì•¼í•˜ë¯€ë¡œ ì´ë¯¸ì§€ ë³€ê²½ì€ ìŠ¤ë ˆë“œìƒì„±
 		Thread th = new Thread() {
 			public void run() {
 				int idx = 0;
 				while(true) {
 					try {
-						//50Àº ÁÖ±â 
+						//50ì€ ì£¼ê¸° 
 						Thread.sleep(200);
-						//¹è¿­·Î ¹İº¹¹® ¸¸µé±â
+						//ë°°ì—´ë¡œ ë°˜ë³µë¬¸ ë§Œë“¤ê¸°
 						/*
-						ImageIcon icon = new ImageIcon("C:\\Users\\503-19\\Desktop\\ÀÚ¿ø\\ÀÌ¹ÌÁö\\"
+						ImageIcon icon = new ImageIcon("C:\\Users\\503-19\\Desktop\\ìì›\\ì´ë¯¸ì§€\\"
 						+ images[idx%images.length]);
 						*/
 						//
-						ImageIcon icon = new ImageIcon("C:\\Users\\503-19\\Desktop\\ÀÚ¿ø\\ÀÌ¹ÌÁö\\"
+						ImageIcon icon = new ImageIcon("C:\\Users\\503-19\\Desktop\\ìì›\\ì´ë¯¸ì§€\\"
 								+ list.get(idx%list.size()));
 						label.setIcon(icon);
 						

@@ -5,34 +5,34 @@ import java.awt.*;
 
 public class ComponentTest extends Frame {
 	public ComponentTest() {
-		setTitle("Ã¼Å©¹Ú½º Å×½ºÆ®");
+		setTitle("ì²´í¬ë°•ìŠ¤ í…ŒìŠ¤íŠ¸");
 		setLocation(100,100);
 		setSize(500,500);
 		
 		Panel p = new Panel();
 		
-		Checkbox cb1= new Checkbox("µ¶¼­");
-		Checkbox cb2= new Checkbox("À½¾Ç°¨»ó");
-		Checkbox cb3= new Checkbox("°ÔÀÓ");
-		Checkbox cb4= new Checkbox("ÇÁ·Î±×·¡¹Ö");
+		Checkbox cb1= new Checkbox("ë…ì„œ");
+		Checkbox cb2= new Checkbox("ìŒì•…ê°ìƒ");
+		Checkbox cb3= new Checkbox("ê²Œì„");
+		Checkbox cb4= new Checkbox("í”„ë¡œê·¸ë˜ë°");
 		p.add(cb1);
 		p.add(cb2);
 		p.add(cb3);
 		p.add(cb4);
 		
-		//¶óµğ¿À ¹öÆ° ¸¸µé±â
+		//ë¼ë””ì˜¤ ë²„íŠ¼ ë§Œë“¤ê¸°
 		CheckboxGroup group = 
 				new CheckboxGroup();
 		Checkbox man =
-				new Checkbox("³²ÀÚ",group,true);
+				new Checkbox("ë‚¨ì",group,true);
 		Checkbox woman =
-				new Checkbox("¿©ÀÚ",group,false);
+				new Checkbox("ì—¬ì",group,false);
 		
 		Choice ch = new Choice();
-		ch.add("º½");
-		ch.add("¿©¸§");
-		ch.add("°¡À»");
-		ch.add("°Ü¿ï");
+		ch.add("ë´„");
+		ch.add("ì—¬ë¦„");
+		ch.add("ê°€ì„");
+		ch.add("ê²¨ìš¸");
 		p.add(ch);
 		
 		
@@ -40,7 +40,7 @@ public class ComponentTest extends Frame {
 		p.add(man);
 		p.add(woman);
 		
-		//5°³¸¦ º¸¿©ÁÖ°í ¿©·¯°³¸¦ ¼±ÅÃÇÒ¼ö ÀÖµµ·Ï ÇØÁÖ´Â List
+		//5ê°œë¥¼ ë³´ì—¬ì£¼ê³  ì—¬ëŸ¬ê°œë¥¼ ì„ íƒí• ìˆ˜ ìˆë„ë¡ í•´ì£¼ëŠ” List
 		List list = new List(5,true);
 		list.add("C%C++");
 		list.add("C#");
@@ -53,10 +53,10 @@ public class ComponentTest extends Frame {
 		list.add("Scala");
 		
 		p.add(list);
-		//listÀÇ romove(int idx)¸¦ ÀÌ¿ëÇÏ¸é idx¹øÂ°¸¦ Áö¿ï¼öÀÖ½À´Ï´Ù
+		//listì˜ romove(int idx)ë¥¼ ì´ìš©í•˜ë©´ idxë²ˆì§¸ë¥¼ ì§€ìš¸ìˆ˜ìˆìŠµë‹ˆë‹¤
 		//list.remove(0);
-		//Ã¹¹øÂ° ¿¡ ÀÖ´Â C%C++°ú 5¹øÂ°¿¡ÀÖ´Â Objective-C¸¦ Á¦°Å
-		//¿©·¯°³¸¦ Áö¿ï ¶§´Â µÚ¿¡¼­ºÎÅÍ »èÁ¦ÇØ¾ßÇÕ´Ï´Ù.
+		//ì²«ë²ˆì§¸ ì— ìˆëŠ” C%C++ê³¼ 5ë²ˆì§¸ì—ìˆëŠ” Objective-Cë¥¼ ì œê±°
+		//ì—¬ëŸ¬ê°œë¥¼ ì§€ìš¸ ë•ŒëŠ” ë’¤ì—ì„œë¶€í„° ì‚­ì œí•´ì•¼í•©ë‹ˆë‹¤.
 		list.remove(4);
 		list.remove(0);
 		

@@ -1,4 +1,4 @@
-package swing;
+package practice;
 
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -8,10 +8,10 @@ import javax.swing.JPanel;
 public class MyWindow1 extends JFrame {
    String[] data = { "Encapsulation", "Inheritance", "Polymorphism", "Information Hiding" };
 
-   // À©µµ¿ì Å¬·¡½º
+   // ìœˆë„ìš° í´ë˜ìŠ¤
    public MyWindow1() {
       setBounds(500, 500, 1000, 1000);
-      setTitle("½ºÀ®");
+      setTitle("ìŠ¤ìœ™");
       setDefaultCloseOperation(EXIT_ON_CLOSE);
 
       JList<String>list = new JList<>(data);

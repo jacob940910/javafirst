@@ -7,11 +7,11 @@ import java.io.IOException;
 public class BufferedInputStreamMain {
 
 	public static void main(String[] args) {
-		//ÆÄÀÏ¿¡¼­ ¹ÙÀÌÆ®´ÜÀ§·Î ¹öÆÛ¸µÀ» ÀÌ¿ëÇØ¼­ ÀĞ±â
+		//íŒŒì¼ì—ì„œ ë°”ì´íŠ¸ë‹¨ìœ„ë¡œ ë²„í¼ë§ì„ ì´ìš©í•´ì„œ ì½ê¸°
 		BufferedInputStream bis = null;
 		try {
 			bis = new BufferedInputStream(
-					new FileInputStream("C:\\Users\\503-19\\Desktop\\ÀÚ¿ø\\07201.txt"));
+					new FileInputStream("C:\\Users\\503-19\\Desktop\\ìì›\\07201.txt"));
 			while(true) {
 				byte [] b = new byte[1024];
 				int r = bis.read(b);
@@ -21,7 +21,7 @@ public class BufferedInputStreamMain {
 				}
 			}
 		}catch(Exception e) {
-			System.out.println("¿¹¿Ü ¹ß»ı:"+e.getMessage());
+			System.out.println("ì˜ˆì™¸ ë°œìƒ:"+e.getMessage());
 		}finally {
 			try {
 				if(bis != null);

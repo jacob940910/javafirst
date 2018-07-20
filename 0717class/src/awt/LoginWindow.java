@@ -10,58 +10,58 @@ import java.awt.TextArea;
 import java.awt.TextField;
 
 public class LoginWindow extends Frame {
-   // »ı¼ºÀÚ - ÀÎ½ºÅÏ½º¸¦ ¸¸µé ¶§ È£ÃâÇÏ´Â ¸Ş¼Òµå
+   // ìƒì„±ì - ì¸ìŠ¤í„´ìŠ¤ë¥¼ ë§Œë“¤ ë•Œ í˜¸ì¶œí•˜ëŠ” ë©”ì†Œë“œ
    public LoginWindow() {
-      // Å©±â, À§Ä¡ ¹× Å¸ÀÌÆ² ¼³Á¤
+      // í¬ê¸°, ìœ„ì¹˜ ë° íƒ€ì´í‹€ ì„¤ì •
       setSize(500, 500);
       setLocation(200, 200);
-      setTitle("·Î±×ÀÎ");
+      setTitle("ë¡œê·¸ì¸");
 
-      // ÆĞ³ÎÀ» »ı¼º
+      // íŒ¨ë„ì„ ìƒì„±
       Panel panel = new Panel();
 
-      Label lblId = new Label("¾ÆÀÌµğ");
+      Label lblId = new Label("ì•„ì´ë””");
       TextField txtId = new TextField(10);
       panel.add(lblId);
       panel.add(txtId);
 
-      Label lblPw = new Label("ºñ¹Ğ¹øÈ£");
+      Label lblPw = new Label("ë¹„ë°€ë²ˆí˜¸");
       TextField txtPw = new TextField(10);
       txtPw.setEchoChar('*');
       panel.add(lblPw);
       panel.add(txtPw);
 
-      // ¿©·¯ ÁÙ ÀÔ·ÂÇÒ ¼ö ÀÖ´Â ÅØ½ºÆ® ¿µ¿ª ¸¸µé±â
+      // ì—¬ëŸ¬ ì¤„ ì…ë ¥í•  ìˆ˜ ìˆëŠ” í…ìŠ¤íŠ¸ ì˜ì—­ ë§Œë“¤ê¸°
       TextArea ta = new TextArea(10, 30);
       panel.add(ta);
 
-      // ÆĞ³ÎÀ» ÇÁ·¹ÀÓ¿¡ ºÎÂø
+      // íŒ¨ë„ì„ í”„ë ˆì„ì— ë¶€ì°©
       add(panel);
       
-      // ¸Ş´º ¹Ù ¸¸µé±â
+      // ë©”ë‰´ ë°” ë§Œë“¤ê¸°
       MenuBar menuBar = new MenuBar();
       
-      //¸Ş´º ¹Ù¸¦ À©µµ¿ì¿¡ ¹èÄ¡
+      //ë©”ë‰´ ë°”ë¥¼ ìœˆë„ìš°ì— ë°°ì¹˜
       setMenuBar(menuBar);
       
-      //¸Ş´º »ı¼º
-      Menu file = new Menu("ÆÄÀÏ(F)");
-      Menu edit = new Menu("ÆíÁı(E)");
-      Menu font = new Menu("¼­½Ä(O)");
+      //ë©”ë‰´ ìƒì„±
+      Menu file = new Menu("íŒŒì¼(F)");
+      Menu edit = new Menu("í¸ì§‘(E)");
+      Menu font = new Menu("ì„œì‹(O)");
       
-      //¸Ş´º¸¦ ¸Ş´º ¹Ù¿¡ ºÎÂø
+      //ë©”ë‰´ë¥¼ ë©”ë‰´ ë°”ì— ë¶€ì°©
       menuBar.add(file);
       menuBar.add(edit);
       menuBar.add(font);
       
-      MenuItem newFile = new MenuItem("»õ·Î ¸¸µé±â(N)...");
+      MenuItem newFile = new MenuItem("ìƒˆë¡œ ë§Œë“¤ê¸°(N)...");
       file.add(newFile);
-      MenuItem openFile = new MenuItem("¿­±â(O)");
+      MenuItem openFile = new MenuItem("ì—´ê¸°(O)");
       file.add(openFile);
-      MenuItem copy = new MenuItem("º¹»ç");
+      MenuItem copy = new MenuItem("ë³µì‚¬");
       edit.add(copy);
       
-      // È­¸é Ãâ·Â
+      // í™”ë©´ ì¶œë ¥
       setVisible(true);
    }
 

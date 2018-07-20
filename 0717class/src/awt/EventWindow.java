@@ -12,20 +12,20 @@ import java.awt.*;
 public class EventWindow extends Frame {
 	public EventWindow() {
 		setBounds(200,200, 400,400);
-		setTitle("ÀÌº¥Æ®Ã³¸®");
-		//¹öÆ°À» »ı¼º
-		Button btn1 = new Button("¹öÆ°1");
-		//¿©·¯°³ÀÇ ÄÄÆ÷³ÍÆ®¸¦ ¹­¾îÁÙ ÆĞ³Î»ı¼º 
+		setTitle("ì´ë²¤íŠ¸ì²˜ë¦¬");
+		//ë²„íŠ¼ì„ ìƒì„±
+		Button btn1 = new Button("ë²„íŠ¼1");
+		//ì—¬ëŸ¬ê°œì˜ ì»´í¬ë„ŒíŠ¸ë¥¼ ë¬¶ì–´ì¤„ íŒ¨ë„ìƒì„± 
 		Panel panel = new Panel();
-		//ÆĞ³Î¿¡ ¹öÆ°À» Ãß°¡
+		//íŒ¨ë„ì— ë²„íŠ¼ì„ ì¶”ê°€
 		panel.add(btn1);
-		//ÆĞ³ÎÀ» À©µµ¿ì¿¡Ãß°¡
+		//íŒ¨ë„ì„ ìœˆë„ìš°ì—ì¶”ê°€
 		add(panel);
-		//À©µµ¿ì¸¦ È­¸é¿¡ Ãâ·Â
+		//ìœˆë„ìš°ë¥¼ í™”ë©´ì— ì¶œë ¥
 		setVisible(true);
 		
 		
-		//¹öÆ°À» ´©¸¦¶§ ÀÌº¥Æ®Ã³¸®´Â ActionListnerÀÎÅÍÆäÀÌ½º°¡ Ã³¸®ÇÕ´Ï´Ù.
+		//ë²„íŠ¼ì„ ëˆ„ë¥¼ë•Œ ì´ë²¤íŠ¸ì²˜ë¦¬ëŠ” ActionListnerì¸í„°í˜ì´ìŠ¤ê°€ ì²˜ë¦¬í•©ë‹ˆë‹¤.
 		ActionListener listner1 = 
 				new ActionListener() {
 
@@ -37,9 +37,9 @@ public class EventWindow extends Frame {
 			
 			
 		};
-		//¹öÆ°°ú ¸®½º³Ê¿¬°á
-		//btn1¿¡ ActionEvent°¡ ¹ß»ıÇÏ¸é 
-		//listner1ÀÇ ¸Ş¼Òµå¸¦ È£ÃâÇÏµµ·Ï ¼³Á¤
+		//ë²„íŠ¼ê³¼ ë¦¬ìŠ¤ë„ˆì—°ê²°
+		//btn1ì— ActionEventê°€ ë°œìƒí•˜ë©´ 
+		//listner1ì˜ ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ë„ë¡ ì„¤ì •
 		btn1.addActionListener(listner1);
 	}
 

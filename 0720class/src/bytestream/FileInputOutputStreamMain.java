@@ -7,33 +7,33 @@ import java.io.IOException;
 public class FileInputOutputStreamMain {
 
 	public static void main(String[] args) {
-		//try - catch - finally´Â °¢°¡ÀÇ ºí·°
-		//ÆÄÀÏ¿¡ ¹ÙÀÌÆ® ´ÜÀ§·Î ±â·ÏÇÒ ¼ö ÀÖ´Â ½ºÆ®¸²º¯¼ö »ı¼º
+		//try - catch - finallyëŠ” ê°ê°€ì˜ ë¸”ëŸ­
+		//íŒŒì¼ì— ë°”ì´íŠ¸ ë‹¨ìœ„ë¡œ ê¸°ë¡í•  ìˆ˜ ìˆëŠ” ìŠ¤íŠ¸ë¦¼ë³€ìˆ˜ ìƒì„±
 		FileOutputStream fos = null;
 		try {
-			//¿¹¿Ü°¡ ¹ß»ıÇÒ°¡´É¼ºÀÌ ÀÖ´Â ±¸¹®
-			//¿¬Àç ÇÁ·ÎÁ§Æ® µğ·ºÅä¸®¿¡ ÆÄÀÏÀ» »ı¼º
+			//ì˜ˆì™¸ê°€ ë°œìƒí• ê°€ëŠ¥ì„±ì´ ìˆëŠ” êµ¬ë¬¸
+			//ì—°ì¬ í”„ë¡œì íŠ¸ ë””ë ‰í† ë¦¬ì— íŒŒì¼ì„ ìƒì„±
 			fos = new FileOutputStream("./0720byte.txt",true);
-			//ÆÄÀÏ¿¡ 1¹ÙÀÌÆ® ±â·Ï
+			//íŒŒì¼ì— 1ë°”ì´íŠ¸ ê¸°ë¡
 			//fos.write(97);
-			//¹öÆÛÀÇ ³»¿ëÀ» ºñ¿ì±â
+			//ë²„í¼ì˜ ë‚´ìš©ì„ ë¹„ìš°ê¸°
 			
-			//ÆÄÀÏ¿¡ ¹ÙÀÌÆ® ¹è¿­À» ±â·Ï
+			//íŒŒì¼ì— ë°”ì´íŠ¸ ë°°ì—´ì„ ê¸°ë¡
 			//byte [] ar = {97, 98, 99, 100, 101};
 			//fos.write(ar);
 			
-			String str = "¾È³çÇÏ¼¼¿ä";
+			String str = "ì•ˆë…•í•˜ì„¸ìš”";
 			fos.write(str.getBytes());
 			
 			fos.flush();
 		}catch(Exception e){
-			//¿¹¿Ü°¡ ¹ß»ıÇßÀ» ¶§ ¼öÇàÇÒ±¸¹®
+			//ì˜ˆì™¸ê°€ ë°œìƒí–ˆì„ ë•Œ ìˆ˜í–‰í• êµ¬ë¬¸
 			System.out.println(
-					"ÆÄÀÏ ÀÔÃâ·Â ¿¹¿Ü:"+ e.getMessage());
-			//ÇöÀç ³¯Â¥¿Í ½Ã°£ ±×¸®°í ¿¹¿Ü³»¿ëÀ» ·Î±ëÇÕ´Ï´Ù.
-			//ÆÄÀÏ¿¡ ±â·ÏÇÏ°Å³ª ³×Æ®¿öÅ©¸¦ ÅëÇØ¼­ ¼­¹ö¿¡ Àü´Ş ÇÕ´Ï´Ù.
+					"íŒŒì¼ ì…ì¶œë ¥ ì˜ˆì™¸:"+ e.getMessage());
+			//í˜„ì¬ ë‚ ì§œì™€ ì‹œê°„ ê·¸ë¦¬ê³  ì˜ˆì™¸ë‚´ìš©ì„ ë¡œê¹…í•©ë‹ˆë‹¤.
+			//íŒŒì¼ì— ê¸°ë¡í•˜ê±°ë‚˜ ë„¤íŠ¸ì›Œí¬ë¥¼ í†µí•´ì„œ ì„œë²„ì— ì „ë‹¬ í•©ë‹ˆë‹¤.
 		}finally {
-			//¿¹¿Ü ¹ß»ı ¿©ºÎ¿¡ »ó°ü¾øÀÌ ¼öÇàÇÒ ±¸¹®
+			//ì˜ˆì™¸ ë°œìƒ ì—¬ë¶€ì— ìƒê´€ì—†ì´ ìˆ˜í–‰í•  êµ¬ë¬¸
 			try {
 				if(fos != null)
 				fos.close();
@@ -45,36 +45,36 @@ public class FileInputOutputStreamMain {
 		FileInputStream fis = null;
 		try {
 			fis = new FileInputStream("./0720byte.txt");
-			//1byte ÀĞ¾î¿À±â
+			//1byte ì½ì–´ì˜¤ê¸°
 			/*
 			int r = fis.read();
 			System.out.println(r);
 			*/
 			
-			//4¹ÙÀÌÆ® ÀĞ±â
+			//4ë°”ì´íŠ¸ ì½ê¸°
 			/*
 			byte [] b = new byte[4];
 			fis.read(b);
 			System.out.println(b);
 			*/
 			
-			//4¹ÙÀÌÆ®¾¿ ÀüÃ¼¸¦ ÀĞ±â
-			//read¿¡ ¹ÙÀÌÆ® ¹è¿­À» ´ëÀÔÇÏ¸é ÀĞÀº°³¼ö¸¦ ¸®ÅÏ
-			//0º¸´Ù ÀÛ°Å³ª °°Àº °ªÀ» ¸®ÅÏÇÏ¸é ÀĞÀ» µ¥ÀÌÅÍ°¡ ¾ø´Â °ÍÀÔ´Ï´Ù.
+			//4ë°”ì´íŠ¸ì”© ì „ì²´ë¥¼ ì½ê¸°
+			//readì— ë°”ì´íŠ¸ ë°°ì—´ì„ ëŒ€ì…í•˜ë©´ ì½ì€ê°œìˆ˜ë¥¼ ë¦¬í„´
+			//0ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ì€ ê°’ì„ ë¦¬í„´í•˜ë©´ ì½ì„ ë°ì´í„°ê°€ ì—†ëŠ” ê²ƒì…ë‹ˆë‹¤.
 			while(true) {
 				byte [] b = new byte[100];
 				int r = fis.read(b);
-				//¹è¿­Àº toStringÀÌ ÀçÁ¤ÀÇ µÇ¾î ÀÖÁö¾Ê¾Æ¼­ ÇØ½ÃÄÚµå°¡ Ãâ·Â
+				//ë°°ì—´ì€ toStringì´ ì¬ì •ì˜ ë˜ì–´ ìˆì§€ì•Šì•„ì„œ í•´ì‹œì½”ë“œê°€ ì¶œë ¥
 				//System.out.println(b);
 				
-				//ÄÚµå¸¦°¢°¢Ãâ·Â
+				//ì½”ë“œë¥¼ê°ê°ì¶œë ¥
 				
 				/*
 				for(byte imsi : b){
 					System.out.println(imsi);
 				}
 				 */
-				//¹®ÀÚ¿­·Î º¯È¯ÇØ¼­ Ãâ·Â
+				//ë¬¸ìì—´ë¡œ ë³€í™˜í•´ì„œ ì¶œë ¥
 				System.out.println(new String(b));
 				if(r <= 0) {
 					break;
@@ -82,7 +82,7 @@ public class FileInputOutputStreamMain {
 			}
 			
 		}catch(Exception e) {
-			System.out.println("ÆÄÀÏ ÀĞ±â ¿¹¿Ü:"+ e.getMessage());
+			System.out.println("íŒŒì¼ ì½ê¸° ì˜ˆì™¸:"+ e.getMessage());
 		}
 		finally {
 			if(fis != null) {

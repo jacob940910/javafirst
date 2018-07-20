@@ -12,13 +12,13 @@ import java.awt.event.TextEvent;
 import java.awt.event.TextListener;
 
 public class EventHandling1 extends Frame {
-   // »ı¼ºÀÚ
+   // ìƒì„±ì
    public EventHandling1() {
-      // À§Ä¡¿Í Å©±â ¼³Á¤
+      // ìœ„ì¹˜ì™€ í¬ê¸° ì„¤ì •
       setBounds(300, 300, 300, 200);
-      // Á¦¸ñ ¼³Á¤
-      setTitle("ÀÌº¥Æ® Ã³¸® ¿¬½À");
-      // ¿©·¯ °³¸¦ ¹èÄ¡ÇÏ±â À§ÇØ¼­ ÆĞ³Î ¹èÄ¡
+      // ì œëª© ì„¤ì •
+      setTitle("ì´ë²¤íŠ¸ ì²˜ë¦¬ ì—°ìŠµ");
+      // ì—¬ëŸ¬ ê°œë¥¼ ë°°ì¹˜í•˜ê¸° ìœ„í•´ì„œ íŒ¨ë„ ë°°ì¹˜
       Panel panel = new Panel();
 
       TextField tf1 = new TextField(5);
@@ -34,18 +34,18 @@ public class EventHandling1 extends Frame {
       TextField result = new TextField(6);
       panel.add(result);
 
-      Button btn = new Button("°è»ê");
+      Button btn = new Button("ê³„ì‚°");
       panel.add(btn);
 
-      // ActionListener ÀÎÅÍÆäÀÌ½ºÀÇ anonymous class »ı¼º
+      // ActionListener ì¸í„°í˜ì´ìŠ¤ì˜ anonymous class ìƒì„±
       ActionListener listener = new ActionListener() {
 
          @Override
          public void actionPerformed(ActionEvent e) {
-            // 1¹øÂ°¿Í 2¹øÂ° ÅØ½ºÆ® ÇÊµåÀÇ ³»¿ë °¡Á®¿À±â
+            // 1ë²ˆì§¸ì™€ 2ë²ˆì§¸ í…ìŠ¤íŠ¸ í•„ë“œì˜ ë‚´ìš© ê°€ì ¸ì˜¤ê¸°
             String n1 = tf1.getText();
             String n2 = tf2.getText();
-            // ¹®ÀÚ¿­À» Á¤¼ö·Î º¯È¯ÇØ¼­ ´õÇÏ±â
+            // ë¬¸ìì—´ì„ ì •ìˆ˜ë¡œ ë³€í™˜í•´ì„œ ë”í•˜ê¸°
             int r = Integer.parseInt(n1) + Integer.parseInt(n2);
             result.setText(r + "");
 
@@ -55,25 +55,25 @@ public class EventHandling1 extends Frame {
 
       btn.addActionListener(listener);
 
-      Label lblPw = new Label("ºñ¹Ğ¹øÈ£");
+      Label lblPw = new Label("ë¹„ë°€ë²ˆí˜¸");
       panel.add(lblPw);
       TextField pw = new TextField(15);
       panel.add(pw);
       Label pwResult = new Label();
       panel.add(pwResult);
 
-      // ÅØ½ºÆ® ÇÊµåÀÇ ³»¿ëÀÌ º¯°æµÉ ¶§ Ã³¸®ÇÒ ¼ö ÀÖ´Â ÀÎÅÍÆäÀÌ½ºÀÇ ÀÎ½ºÅÏ½º¸¦ »ı¼º
+      // í…ìŠ¤íŠ¸ í•„ë“œì˜ ë‚´ìš©ì´ ë³€ê²½ë  ë•Œ ì²˜ë¦¬í•  ìˆ˜ ìˆëŠ” ì¸í„°í˜ì´ìŠ¤ì˜ ì¸ìŠ¤í„´ìŠ¤ë¥¼ ìƒì„±
       TextListener t1 = new TextListener() {
 
          @Override
          public void textValueChanged(TextEvent e) {
             String password = pw.getText();
-            //°³¼ö ÀúÀå º¯¼ö ¼³Á¤
+            //ê°œìˆ˜ ì €ì¥ ë³€ìˆ˜ ì„¤ì •
             int dae = 0;
             int so = 0;
             int su = 0;
             int etc = 0;
-            // passwordÀÇ ¸ğµç ±ÛÀÚ¸¦ ¼øÈ¸ (¿µ¹®´ë¼Ò¹®ÀÚ, ¼ıÀÚ, Æ¯¼ö¹®ÀÚÀÇ °³¼ö ÆÄ¾Ç)
+            // passwordì˜ ëª¨ë“  ê¸€ìë¥¼ ìˆœíšŒ (ì˜ë¬¸ëŒ€ì†Œë¬¸ì, ìˆ«ì, íŠ¹ìˆ˜ë¬¸ìì˜ ê°œìˆ˜ íŒŒì•…)
             for (int i = 0; i < password.length(); i = i + 1) {
                char ch = password.charAt(i);
                if (ch >= 'A' && ch <= 'Z') {
@@ -88,11 +88,11 @@ public class EventHandling1 extends Frame {
             }
 if(dae*so*su*etc > 0) {
    pwResult.setForeground(Color.RED);
-   pwResult.setText("º¸¾ÈÀÌ °­ÇÑ ºñ¹Ğ¹øÈ£ÀÔ´Ï´Ù.");
+   pwResult.setText("ë³´ì•ˆì´ ê°•í•œ ë¹„ë°€ë²ˆí˜¸ì…ë‹ˆë‹¤.");
 }
 else {
    pwResult.setForeground(Color.RED);
-   pwResult.setText("º¸¾ÈÀÌ ¾àÇÑ ºñ¹Ğ¹øÈ£ÀÔ´Ï´Ù.");
+   pwResult.setText("ë³´ì•ˆì´ ì•½í•œ ë¹„ë°€ë²ˆí˜¸ì…ë‹ˆë‹¤.");
 }
          }
 
@@ -100,7 +100,7 @@ else {
 
       pw.addTextListener(t1);
       add(panel);
-      // È­¸é Ãâ·Â
+      // í™”ë©´ ì¶œë ¥
       setVisible(true);
    }
 

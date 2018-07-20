@@ -8,13 +8,13 @@ public class PrintStreamMain {
 	public static void main(String[] args) {
 		PrintStream ps = null;
 		try {
-			//true°ªÀ» ÁÖ¸é ÀÌ¾î¾²±â°¡µÊ
+			//trueê°’ì„ ì£¼ë©´ ì´ì–´ì“°ê¸°ê°€ë¨
 			ps = new PrintStream(new FileOutputStream("./data.dat",true));
-			ps.println("¾È³çÇÏ¼¼¿ä");
-			ps.println("¹İ°©½À´Ï´Ù");
+			ps.println("ì•ˆë…•í•˜ì„¸ìš”.");
+			ps.println("ë°˜ê°‘ìŠµë‹ˆë‹¤.");
 			ps.flush();
 		}catch(Exception e) {
-			System.out.println("ÆÄÀÏ¾²±â ¿¹¿Ü:"+e.getMessage());
+			System.out.println("íŒŒì¼ì“°ê¸° ì˜ˆì™¸:"+e.getMessage());
 		}finally {
 			if(ps !=null)
 				ps.close();
